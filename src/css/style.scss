@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+
+*{
+    font-family: 'montserrat', sans-serif;
+}
+
+h1,h2,h3{font-weight: bold;}
+
+.fb-{
+    &1{
+        font-weight: 700;
+        font-size: 64px;
+        line-height: 78px;
+        @media (min-width: 0px) and (max-width: 991.98px){
+            font-size: 42px;
+            line-height: 55px; 
+        }
+    }
+}
+
+// ---------- Reset
+.iconify{
+    color: inherit;
+}
+// --- Bootstrap
+// -- Button
+.btn-{
+    &primary{
+        background-color: #EA1D22;
+        color: #fff;
+        border-color: #EA1D22;
+        &:hover{background-color: #c41c1f;border-color: #c41c1f;}
+    }
+    &sec{
+        font-weight: bold;
+        >.iconify{color: #EA1D22;}
+        &:hover{text-decoration: underline;}
+    }
+}
+// ---------- Compontents
+// -- Line Clamp
+.lc{
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    &.lc-1{
+        -webkit-line-clamp: 1;
+    }
+    &.lc-2{
+        -webkit-line-clamp: 2;
+    }
+    &.lc-3{
+        -webkit-line-clamp: 3;
+    }
+}
+
+// -- Divider
+.divider{
+    border: 5px solid #EA1D22;
+    opacity: 1;
+    width: 60px;
+    text-align: center;
+}
+// -- Menu
+.menu{
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    >a{
+        text-decoration: none;
+        color: #9c9c9c;
+        &:hover{color: #212121;}
+        &.active{font-weight: bold;color: #EA1D22;position:relative;
+            &::before{
+                content :'';
+                position: absolute;
+                top: -20px;
+                height: 10px;
+                background-color: #EA1D22;
+                width: 2em;
+            }
+        }
+    }
+}
+
+// ---------- Section
+// -- Hero
+.hero{
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    >div{max-width: 50em;}
+}
+
+.services{
+    background: linear-gradient(90deg, #F8F8F8 0%, #F8F8F8 34.37%, #FFFFFF 34.38%, #FFFFFF 100%);
+    .service-card{
+        display: flex;
+        padding: 1em;
+        padding-left: 0px;
+        align-items: center;
+        gap: 27px;
+        background: linear-gradient(270deg, #FFFFFF 85.34%, rgba(255, 255, 255, 0) 100%);
+        box-shadow: 15px 5px 50px -15px rgba(0, 0, 0, 0.15);
+        margin-bottom: 1em;
+        text-decoration: none;
+        color: #212121;
+
+        &:hover{
+            box-shadow: 15px 10px 20px -10px rgba(234, 29, 34, 0.2);
+            >.iconify{color: #EA1D22;}
+        }
+        
+        .no{font-weight: 700;
+            font-size: 48px;
+            line-height: 59px;
+            color: #fff;
+            background-color: #212121;
+            padding: 0px 12px;
+        }
+
+        >.iconify{
+            font-size: 32px;
+            color: #cecece;
+        }
+    }
+}
+
+.product{
+    background: linear-gradient(270deg, #F8F8F8 32.96%, #FFFFFF 32.97%);
+    &-card{
+        width: 315px;
+        .iconify{color: #cecece;}
+        &:hover .iconify{color: #EA1D22;}
+    }
+}
+
+.news{
+    &-card{
+        width: 315px;
+        
+        .iconify{color: #cecece;}
+        &:hover {
+            h5{color: #EA1D22;}
+            .iconify{color: #EA1D22;}
+        }
+    }
+}

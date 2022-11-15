@@ -1,0 +1,160 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap");
+* {
+  font-family: "montserrat", sans-serif;
+}
+
+h1, h2, h3 {
+  font-weight: bold;
+}
+
+.fb-1 {
+  font-weight: 700;
+  font-size: 64px;
+  line-height: 78px;
+}
+@media (min-width: 0px) and (max-width: 991.98px) {
+  .fb-1 {
+    font-size: 42px;
+    line-height: 55px;
+  }
+}
+
+.iconify {
+  color: inherit;
+}
+
+.btn-primary {
+  background-color: #EA1D22;
+  color: #fff;
+  border-color: #EA1D22;
+}
+.btn-primary:hover {
+  background-color: #c41c1f;
+  border-color: #c41c1f;
+}
+.btn-sec {
+  font-weight: bold;
+}
+.btn-sec > .iconify {
+  color: #EA1D22;
+}
+.btn-sec:hover {
+  text-decoration: underline;
+}
+
+.lc {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.lc.lc-1 {
+  -webkit-line-clamp: 1;
+}
+.lc.lc-2 {
+  -webkit-line-clamp: 2;
+}
+.lc.lc-3 {
+  -webkit-line-clamp: 3;
+}
+
+.divider {
+  border: 5px solid #EA1D22;
+  opacity: 1;
+  width: 60px;
+  text-align: center;
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+.menu > a {
+  text-decoration: none;
+  color: #9c9c9c;
+}
+.menu > a:hover {
+  color: #212121;
+}
+.menu > a.active {
+  font-weight: bold;
+  color: #EA1D22;
+  position: relative;
+}
+.menu > a.active::before {
+  content: "";
+  position: absolute;
+  top: -20px;
+  height: 10px;
+  background-color: #EA1D22;
+  width: 2em;
+}
+
+.hero {
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+}
+.hero > div {
+  max-width: 50em;
+}
+
+.services {
+  background: linear-gradient(90deg, #F8F8F8 0%, #F8F8F8 34.37%, #FFFFFF 34.38%, #FFFFFF 100%);
+}
+.services .service-card {
+  display: flex;
+  padding: 1em;
+  padding-left: 0px;
+  align-items: center;
+  gap: 27px;
+  background: linear-gradient(270deg, #FFFFFF 85.34%, rgba(255, 255, 255, 0) 100%);
+  box-shadow: 15px 5px 50px -15px rgba(0, 0, 0, 0.15);
+  margin-bottom: 1em;
+  text-decoration: none;
+  color: #212121;
+}
+.services .service-card:hover {
+  box-shadow: 15px 10px 20px -10px rgba(234, 29, 34, 0.2);
+}
+.services .service-card:hover > .iconify {
+  color: #EA1D22;
+}
+.services .service-card .no {
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 59px;
+  color: #fff;
+  background-color: #212121;
+  padding: 0px 12px;
+}
+.services .service-card > .iconify {
+  font-size: 32px;
+  color: #cecece;
+}
+
+.product {
+  background: linear-gradient(270deg, #F8F8F8 32.96%, #FFFFFF 32.97%);
+}
+.product-card {
+  width: 315px;
+}
+.product-card .iconify {
+  color: #cecece;
+}
+.product-card:hover .iconify {
+  color: #EA1D22;
+}
+
+.news-card {
+  width: 315px;
+}
+.news-card .iconify {
+  color: #cecece;
+}
+.news-card:hover h5 {
+  color: #EA1D22;
+}
+.news-card:hover .iconify {
+  color: #EA1D22;
+}/*# sourceMappingURL=style.css.map */
