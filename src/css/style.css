@@ -3,6 +3,10 @@
   font-family: "montserrat", sans-serif;
 }
 
+body {
+  min-height: 100vh;
+}
+
 h1, h2, h3 {
   font-weight: bold;
 }
@@ -68,6 +72,7 @@ h1, h2, h3 {
   display: flex;
   align-items: center;
   gap: 25px;
+  transition: all 0.3s ease-in-out;
 }
 .menu > a {
   text-decoration: none;
@@ -88,6 +93,36 @@ h1, h2, h3 {
   height: 10px;
   background-color: #EA1D22;
   width: 2em;
+}
+@media (min-width: 0px) and (max-width: 991.98px) {
+  .menu {
+    flex-direction: column;
+    align-items: end;
+    padding: 1em;
+    background-color: #fff;
+    position: fixed;
+    z-index: 99;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    width: 20em;
+    transform: translateX(100%);
+  }
+  .menu > a.active {
+    z-index: 1;
+  }
+  .menu > a.active::before {
+    top: auto;
+    left: 0;
+    z-index: -1;
+    background-color: #212121;
+  }
+  .menu.active {
+    transform: translateX(0);
+  }
+}
+.menu-close, .menu-open {
+  cursor: pointer;
 }
 
 .hero {
@@ -133,6 +168,36 @@ h1, h2, h3 {
   color: #cecece;
 }
 
+.service .service-card {
+  display: flex;
+  padding: 1em;
+  padding-left: 0px;
+  align-items: center;
+  gap: 27px;
+  background: linear-gradient(270deg, #FFFFFF 85.34%, rgba(255, 255, 255, 0) 100%);
+  box-shadow: 15px 5px 50px -15px rgba(0, 0, 0, 0.15);
+  text-decoration: none;
+  color: #212121;
+}
+.service .service-card:hover {
+  box-shadow: 15px 10px 20px -10px rgba(234, 29, 34, 0.2);
+}
+.service .service-card:hover > .iconify {
+  color: #EA1D22;
+}
+.service .service-card .no {
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 59px;
+  color: #fff;
+  background-color: #212121;
+  padding: 0px 12px;
+}
+.service .service-card > .iconify {
+  font-size: 32px;
+  color: #cecece;
+}
+
 .product {
   background: linear-gradient(270deg, #F8F8F8 32.96%, #FFFFFF 32.97%);
 }
@@ -157,4 +222,16 @@ h1, h2, h3 {
 }
 .news-card:hover .iconify {
   color: #EA1D22;
+}
+
+.new-card > img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+@media (min-width: 0px) and (max-width: 767.98px) {
+  .new-card > img {
+    width: 5em;
+    height: 5em;
+  }
 }/*# sourceMappingURL=style.css.map */

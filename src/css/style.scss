@@ -4,6 +4,7 @@
     font-family: 'montserrat', sans-serif;
 }
 
+body{min-height: 100vh;}
 h1,h2,h3{font-weight: bold;}
 
 .fb-{
@@ -61,11 +62,13 @@ h1,h2,h3{font-weight: bold;}
     width: 60px;
     text-align: center;
 }
+
 // -- Menu
 .menu{
     display: flex;
     align-items: center;
     gap: 25px;
+    transition: all 0.3s ease-in-out;
     >a{
         text-decoration: none;
         color: #9c9c9c;
@@ -81,6 +84,29 @@ h1,h2,h3{font-weight: bold;}
             }
         }
     }
+    @media (min-width: 0px) and (max-width: 991.98px){
+        flex-direction: column;
+        align-items: end;
+        padding: 1em;
+        background-color: #fff;
+        position: fixed;
+        z-index: 99;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        width: 20em;
+        transform: translateX(100%);
+        >a.active{z-index: 1;&::before{
+            top: auto;
+            left: 0;
+            z-index: -1;
+            background-color: #212121;
+        }}
+        &.active{
+            transform: translateX(0);
+        }
+    }
+    &-close,&-open{cursor: pointer;}
 }
 
 // ---------- Section
@@ -126,6 +152,36 @@ h1,h2,h3{font-weight: bold;}
     }
 }
 
+.service .service-card{
+    display: flex;
+    padding: 1em;
+    padding-left: 0px;
+    align-items: center;
+    gap: 27px;
+    background: linear-gradient(270deg, #FFFFFF 85.34%, rgba(255, 255, 255, 0) 100%);
+    box-shadow: 15px 5px 50px -15px rgba(0, 0, 0, 0.15);
+    text-decoration: none;
+    color: #212121;
+
+    &:hover{
+        box-shadow: 15px 10px 20px -10px rgba(234, 29, 34, 0.2);
+        >.iconify{color: #EA1D22;}
+    }
+    
+    .no{font-weight: 700;
+        font-size: 48px;
+        line-height: 59px;
+        color: #fff;
+        background-color: #212121;
+        padding: 0px 12px;
+    }
+
+    >.iconify{
+        font-size: 32px;
+        color: #cecece;
+    }
+}
+
 .product{
     background: linear-gradient(270deg, #F8F8F8 32.96%, #FFFFFF 32.97%);
     &-card{
@@ -144,5 +200,13 @@ h1,h2,h3{font-weight: bold;}
             h5{color: #EA1D22;}
             .iconify{color: #EA1D22;}
         }
+    }
+}
+.new-card>img{
+    width: 100%;
+    object-fit: cover;
+    @media (min-width: 0px) and (max-width: 767.98px){
+        width: 5em;
+        height: 5em;
     }
 }

@@ -17,15 +17,21 @@
 </head>
 <body>
     <header>
-        <div class="d-flex align-items-center justify-content-between p-2 px-5">
+        <div class="d-flex align-items-center justify-content-between p-2 px-3 px-lg-5">
             <a href=""><img src="./src/img/logo.png" alt="logo" class="d-block"></a>
+            <div class="menu-open d-flex align-items-center justify-content-center d-lg-none">
+                <span class="iconify fs-3" data-icon="lucide:align-right"></span>
+            </div>
             <nav class="menu">
-                <a href="" class="active">Home</a>
-                <a href="">About</a>
-                <a href="">Services</a>
-                <a href="">Products</a>
-                <a href="">News</a>
-                <a href="">Contact</a>
+                <div class="menu-close d-flex align-items-center justify-content-center d-lg-none">
+                    <span class="iconify fs-3" data-icon="bi:arrow-right"></span>
+                </div>
+                <a href="./index.html">Home</a>
+                <a href="./about.html" class="active">About</a>
+                <a href="./service.html">Services</a>   
+                <a href="./product.html">Products</a>
+                <a href="./news.html">News</a>
+                <a href="./contact.html">Contact</a>
             </nav>
         </div>
     </header>
@@ -203,7 +209,7 @@
     </main>
     <footer>
         <div class="container bg-dark text-white p-4 px-5">
-            <strong>&copy;</strong> All Reserved by <strong>Elang Merah Api</strong> & <a href="" class="fw-bold text-white">hialdev</a> - 2022
+            <strong>&copy;</strong> All Reserved by <strong>CV. Dwi Mitra Liftindo</strong> - 2022
         </div>
     </footer>
 
