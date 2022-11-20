@@ -234,4 +234,9 @@ h1, h2, h3 {
     width: 5em;
     height: 5em;
   }
+}
+@media (min-width: 0px) and (max-width: 767.98px) {
+  .new-card p {
+    display: none;
+  }
 }/*# sourceMappingURL=style.css.map */

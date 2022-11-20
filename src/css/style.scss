@@ -52,7 +52,7 @@ h1,h2,h3{font-weight: bold;}
     }
     &.lc-3{
         -webkit-line-clamp: 3;
-    }
+    }                                                                                                                                                                                                                                                                                                   
 }
 
 // -- Divider
@@ -202,11 +202,18 @@ h1,h2,h3{font-weight: bold;}
         }
     }
 }
-.new-card>img{
-    width: 100%;
-    object-fit: cover;
-    @media (min-width: 0px) and (max-width: 767.98px){
-        width: 5em;
-        height: 5em;
+.new-card{
+    &>img{
+        width: 100%;
+        object-fit: cover;
+        @media (min-width: 0px) and (max-width: 767.98px){
+            width: 5em;
+            height: 5em;
+        }
+    }
+    p{
+        @media (min-width: 0px) and (max-width: 767.98px){
+            display: none;
+        }
     }
 }
