@@ -60,6 +60,12 @@ h1, h2, h3 {
 .lc.lc-3 {
   -webkit-line-clamp: 3;
 }
+.lc.lc-4 {
+  -webkit-line-clamp: 4;
+}
+.lc.lc-5 {
+  -webkit-line-clamp: 5;
+}
 
 .divider {
   border: 5px solid #EA1D22;
@@ -239,4 +245,32 @@ h1, h2, h3 {
   .new-card p {
     display: none;
   }
+}
+
+.news-item .content {
+  margin: 2em 0px;
+}
+.news-item .content img {
+  display: block;
+  width: 100%;
+  max-width: 40em;
+  margin: 1.9em 0px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.news-item .news-recomend {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+  color: #212121;
+  text-decoration: none;
+}
+.news-item .news-recomend:hover {
+  color: #EA1D22;
+}
+.news-item .news-recomend > img {
+  width: 7em;
+  height: 7em;
+  -o-object-fit: cover;
+     object-fit: cover;
 }/*# sourceMappingURL=style.css.map */
